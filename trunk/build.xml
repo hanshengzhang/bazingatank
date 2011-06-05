@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<project name="bazinga" basedir="." default="build"> 
+  <description>build.xml for bazinga project</description>
+  <property name="src.dir" value="${basedir}/src" />
+  <property name="build.dir" value="${basedir}/bin" />
+  <property name="jar.file" value="${basedir}/bazingaTank_v1.0.jar" />
+  <property name="docs.dir" value="${basedir}/docs" />
+  <target name="build" description="compile and build the project">
+    <mkdir dir="${build.dir}"/>
+    <copy todir="${build.dir}">
+      <fileset dir="${src.dir}" excludes="**/*.java"/>
+    </copy>
+    <javac srcdir="${src.dir}" destdir="${build.dir}" 
+	   includes="**/*.java" includeantruntime="on"/>
+  </target>
+  <target name="archive" depends="build" 
+	  description="generate jar file for project">
+    <manifest file="${build.dir}/MANIFEST.MF">
+      <attribute name="Build-By" value="Zhang Hansheng"/>
+      <attribute name="Main-Class" value="view.GraphicsClient" />
+    </manifest>
+    <jar destfile="${jar.file}" basedir="${build.dir}" manifest="${build.dir}/MANIFEST.MF"/>
+    <delete file="${build.dir}/MANIFEST.MF" />
+  </target>
+   <target name="javadocs" description="generate javadoc files">
+    <mkdir dir="${docs.dir}"/>
+    <javadoc destdir="docs" encoding="GB2312" docencoding="GB2312">
+      <packageset dir="${src.dir}" />
+    </javadoc>
+  </target>
+  <target name="clean" description="clean the project">
+    <delete deleteonexit="true" dir="${build.dir}"/>
+    <delete deleteonexit="true" dir="${docs.dir}"/>
+    <delete deleteonexit="true" file="${jar.file}"/>
+  </target>
+</project>

@@ -1,0 +1,65 @@
+[INTRODUCTION]
+	"bazinga" is a project that  develops a game named "bazingaTank". We want to learn more about open-source project developing and to develop a game that we can play it when free. "bazingaTank" is an very interesting game, and most of us may have played in many times in our childhood. See more details about the games at [REFERENCE].
+	The project lasts for about two  months. The members of the team has spent a lot of time developing it. You can add more functions into the game to make it more interesting. Enjoy yourself !
+
+[AUTHORS]
+	The project is developed by Team BazingaTank. The members of the Team are as follows:
+	Zhang Hansheng, EECS 08, Peking University.
+	Liu Dun, EECS 08, Peking University.
+	Wu Jiaqing, EECS 08, Peking University.
+
+[INSTALL]
+	You can install the game in four ways.:
+	1. check out of download the jar file "http://i.pku.edu.cn/svn/bazinga/releases/bazingaTank_v1.0.jar", then run it.
+	2. check out the project using eclipse, with URL "http://i.pku.edu.cn/svn/bazinga/eclipse_project".
+	3. get the source AT "http://i.pku.edu.cn/svn/bazinga/eclipse_project/src", then compile it yourself. It is very easy to for java developers.
+	4. check out "http://i.pku.edu.cn/svn/bazinga/bazingaTank". Use apache ant to generated wanted files.
+	"ant" or "ant build"	to complile sources files.
+	"ant archive"		to get the a jar file
+	"ant javadocs"		to generate javadoc files
+	"ant clean"		to clean the project
+	Attention:
+	1.The Main-class is "view.GraphicsClient"
+	2.You should use Java Runtime Environment 1.6.0 or later versions.
+	3.You may meet sound problems caused by audio driver under "Ubuntu". Use padsp java instead of java.
+
+[REFERENCE]
+	1.How to run?
+	      a) Windows: double click the jar file is enough on condition that your Windows has successfully installed Java Runtime Environment(JRE)(Go to: www.java.com for details).
+              You do NOT need to extract the jar file.
+	      b) Linux: 
+	      $ java -jar XXX.jar
+	      Above is the common usage. If you encounter audio problem, try running the game using:
+	      $ padsp java -jar XXX.jar
+	      This command force your program to use Pulse audio driver which supports sound mixing rather than Alsa audio driver. So make sure your Linux has installed Pulse audio driver.
+	      Also, your Linux should have successfully installed JRE. We DO recommend Sun JDK instead of OpenJDK.
+	2. How to play?
+      	       a) One player: WASD for directions and SPACE for shoot
+   	       b) Two player: 
+	       Player 1 - WASD + SPACE
+	       Player 2 - Arrow Key + ENTER
+	       c) There are bonuses appearing during the game. Try to catch them
+	       d) You can try to set the map.
+[LICENSE]
+	Copyright 2011 Team BazingaTank. All rights reserved.
+	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+   	1. Redistributions of source code must retain the above copyright notice, this list of  conditions and the following disclaimer.
+   	2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+	THIS SOFTWARE IS PROVIDED BY Team BazingaTank ``AS IS'' AND ANY EXPRESS OR IMPLIED
+	WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+	FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL Team BazingaTank OR
+	CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+	SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+	ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+	ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+	The views and conclusions contained in the software and documentation are those of the
+authors and should not be interpreted as representing official policies, either expressed
+or implied, of Team BazingaTank.
+
+[FAQs]
+
+Any problems contact hanshzh256@gmail.com. If your problems are typical, we will add it to our FAQs.
