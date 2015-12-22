@@ -4,6 +4,8 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.DataLine;
+import java.io.BufferedInputStream;
+
 public class Audio extends Thread{
 	String fileName;
 	public Audio(String s){
@@ -16,7 +18,7 @@ public class Audio extends Thread{
 	}
     public void play(String fileurl){
     	try{
-    		AudioInputStream ais = AudioSystem.getAudioInputStream(ClassLoader.getSystemResourceAsStream(fileurl));
+    		AudioInputStream ais = AudioSystem.getAudioInputStream(new BufferedInputStream(ClassLoader.getSystemResourceAsStream(fileurl)));
     		AudioFormat aif = ais.getFormat();
     		SourceDataLine sdl = null;
     		DataLine.Info info = new DataLine.Info(SourceDataLine.class, aif);
